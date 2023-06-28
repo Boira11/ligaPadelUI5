@@ -1,0 +1,266 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:f="sap.f"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:u="sap.ui.unified"
+	xmlns:layout="sap.ui.layout">
+	<Dialog
+		id="wizardDialog"
+		showHeader="false"
+		verticalScrolling="false"
+		contentHeight="70%"
+		contentWidth="80%">
+		<f:DynamicPage id="_IDGenDynamicPage1"
+			stickySubheaderProvider="CreateMatchWizard"
+			toggleHeaderOnTitleClick="false"
+			class="sapUiNoContentPadding"
+			showFooter="true">
+			<f:title>
+				<f:DynamicPageTitle id="_IDGenDynamicPageTitle1">
+					<f:heading>
+						<Title id="_IDGenTitle1Wizard" text="Crear un Partido"/>
+					</f:heading>
+				</f:DynamicPageTitle>
+			</f:title>
+			<f:content>
+				<Wizard id="CreatematchWizard"
+						class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
+						showNextButton="false"
+						navigationChange="handleNavigationChange"
+						renderMode="Page">
+
+                    <!-- PASO 1 DEL WIZARD : INFO JUGADOR LOCAL -->
+					<WizardStep id="PlayerLInfoWizard"
+								title="Jugador Local"
+								validated="true"
+								activate="MatchTypeActivate">
+						<MessageStrip id="_IDGenMessageStrip1" class="sapUiSmallMarginBottom"
+								text="Informacion del jugador Local"
+								showIcon="true"/>
+
+                        <form:SimpleForm id="_idFormInfoPlayerWizard"
+								editable="true">
+							<Label id="idLabelJugadorLocalWizard" text="Nombre Jugador local" required="true"/>
+							<Input id="jugadorLocalWizard" 
+									placeholder="Nombre del jugador local"/>
+
+                            <Label id="idLabelJugadorLocalApellidoWizard" text="Apellido Jugador local" required="true"/>
+							<Input id="jugadorLocalApellidoWizard" 
+									placeholder="Apellido del jugador local"/>
+            
+                                    
+							<Label id="_IdLabelNivel" text="Nivel" required="true"/>
+							<Input valueStateText="Enter digits"
+								   id="_idNivelLocalWizard"
+								   type="Number" placeholder="Nivel"/>
+                            
+							<Label id="_idPosicionPistaWizardLocal" text="Posicion"/>
+							<Select id="_IDGenSelectPosicionLocal">
+								<core:Item id="_idPosicionPistaLocalWizardL" key="Izquierda" text="Izquierda"/>
+								<core:Item id="_idPosicionPistaLocalWizardR" key="Derecha" text="Derecha"/>
+							</Select>
+						</form:SimpleForm>
+					</WizardStep>
+
+					<!-- PASO 1.2 DEL WIZARD : INFO JUGADOR VISITANTE -->
+					<WizardStep id="PlayerVInfoWizard"
+								title="Jugador Visitante"
+								validated="true"
+								activate="MatchTypeActivate">
+						<MessageStrip id="_IDGenMessageStripV" class="sapUiSmallMarginBottom"
+								text="Informacion del Jugador Visitante"
+								showIcon="true"/>
+
+                        <form:SimpleForm id="_idFormInfoPlayerWizardV"
+								editable="true">
+							
+                            <Label id="idLabelJugadorVisitanteWizard" text="Nombre Jugador Visitante" required="true"/>
+							<Input id="jugadorVisitanteWizard" 
+									placeholder="Nombre del jugador Visitante"/>
+
+                            <Label id="idLabelJugadorVisitanteApellidoWizard" text="Apellido Jugador Visitante" required="true"/>
+							<Input id="jugadorVisitanteApellidoWizard" 
+									placeholder="Apellido del jugador Visitante"/>
+                                    
+							<Label id="_IdLabelNivelVisitante" text="Nivel" required="true"/>
+							<Input valueStateText="Enter digits"
+								   id="_idNivelWizard"
+								   type="Number" placeholder="Nivel"/>
+                            
+							<Label id="_idPosicionPistaVisitanteWizard" text="Posicion"/>
+							<Select id="_IDGenSelect1">
+								<core:Item id="_idPosicionPistaVisitanteWizardL" key="Izquierda" text="Izquierda"/>
+								<core:Item id="_idPosicionPistaVisitanyteWizardR" key="Derecha" text="Derecha"/>
+							</Select>
+						</form:SimpleForm>
+					</WizardStep>
+
+
+                    <!-- PASO 2 INFO DEL PARTIDO  -->
+
+                    <WizardStep id="MatchInfoWizard"
+								title="Informacion del partido"
+								validated="true"
+								activate="matchTypeActivate2">
+						<MessageStrip id="_IDGenMessageStripInfoMatch" class="sapUiSmallMarginBottom"
+								text="Informacion del partido"
+								showIcon="true"/>
+
+                        <form:SimpleForm id="_idFormInfoMatchWizard"
+								editable="true">
+							<Label id="idLabelLocalidadWizard" text="Club de Padel" required="true"/>
+							<Input id="idLocalidadWizard" 
+                                   type="Text"
+									placeholder="Complejo deportivo"/>
+
+                            <Label id="idLabelFechaPartidoWizard" text="Fecha del partido" required="true"/>
+							<Input id="idInputFechaPartidoWizard" 
+									placeholder="Fecha del Partido"
+                                    type="Date"/>
+
+                            
+							<Label id="_idLabelHorarioPartidoWizard" text="Hora del Partido"/>
+							<Input id="idInputHoraPartidoWizard" 
+									placeholder="Hora del Partido"
+                                    type="Time"/>
+
+                                
+                            <Label id="_idLabelTiempoJuegoPartidoWizard" text="Tiempo de Juego"/>
+							<Input id="idInputTiempoJuegoPartidoWizard" 
+									placeholder="Hora del Partido"
+                                    type="Number"/>
+						</form:SimpleForm>
+					</WizardStep>
+
+					<!-- PASO 3 RESULTADO DEL PARTIDO  -->
+
+                    <WizardStep id="MatchInfoResultWizard"
+								title="Resultado del partido"
+								validated="true"
+								activate="matchTypeActivate2">
+						<MessageStrip id="_IDGenMessageStripdInfoMatch" class="sapUiSmallMarginBottom"
+								text="Informacion del partido disputado"
+								showIcon="true"/>
+
+                        <form:SimpleForm id="_idFormInfdoMatchWizard"
+								editable="true">
+						<Label id="idLabelResultadoPrimerSet" text="Resultado del primer Set" required="true"/>
+							<Input id="idInputResultadoLocalPrimerSet" 
+                                   type="Number"/>
+
+							<Input id="idInputResultadoVisitantePrimerSet" 
+                                   type="Number"/>
+
+						<Label id="idLabelResultadoSegundoSet" text="Resultado del segundo Set" required="true"/>
+							<Input id="idInputResultadoLocalSegundoSet" 
+                                   type="Number"/>
+
+							<Input id="idInputResultadoVisitanteSegundoSet" 
+                                   type="Number"/>
+						
+						<Label id="idLabelResultadoTieBreak" text="Resultado del Tie Break Set" required="true"/>
+							<Input id="idInputResultadoLocalTieBreak" 
+                                   type="Number"
+								   enabled="false"/>
+
+							<Input id="idInputResultadoVisitanteTieBreak" 
+                                   type="Number"
+								   enabled="false"/>
+
+
+						</form:SimpleForm>
+					</WizardStep>
+
+                    <!-- PASO REWIEW DEL WIZARD : REVISA LA INFO DE TODO  -->
+					<!-- <WizardStep
+							id="ReviewPage"
+							activate="reviewActivate"
+							complete="reviewComplete"
+							validated="true"
+							title="Review page">
+								<form:SimpleForm id="_IDGenSimpleForm4"
+										title="1. Product Type"
+										minWidth="1024"
+										editable="false"
+										layout="ResponsiveGridLayout">
+									<form:content>
+										<Label id="_IDGenLabel12" text="Type"/>
+										<Text id="ProductTypeChosen" text="{/productType}"/>
+										<Link id="_IDGenLink1" press="editStepOne" text="Edit" />
+									</form:content>
+								</form:SimpleForm>
+
+								<form:SimpleForm id="_IDGenSimpleForm5"
+										title="2. Product Information"
+										minWidth="1024"
+										editable="false"
+										layout="ResponsiveGridLayout">
+									<form:content>
+										<Label id="_IDGenLabel13" text="Name"/>
+										<Text id="ProductNameChosen" text="{/productName}"/>
+										<Label id="_IDGenLabel14" text="Weight"/>
+										<Text id="ProductWeightChosen" text="{/productWeight}"/>
+										<Label id="_IDGenLabel15" text="Manufacturer"/>
+										<Text id="ProductManufacturerChosen" text="{/productManufacturer}"/>
+										<Label id="_IDGenLabel16" text="Description"/>
+										<Text id="ProductDescriptionChosen" text="{/productDescription}"/>
+										<Link id="_IDGenLink2" press="editStepTwo" text="Edit" />
+									</form:content>
+								</form:SimpleForm>
+
+								<form:SimpleForm id="_IDGenSimpleForm6"
+										title="3. Optional Information"
+										minWidth="1024"
+										editable="false"
+										layout="ResponsiveGridLayout">
+									<form:content>
+										<Label id="_IDGenLabel17" text="Some text"/>
+										<Text id="_IDGenText4" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. "/>
+										<Label id="_IDGenLabel18" text="Manufacturing Date"/>
+										<Text id="ManufacturingDate" text="{/manufacturingDate}"/>
+										<Label id="_IDGenLabel19" text="Availability"/>
+										<Text id="AvailabilityChosen" text="{/availabilityType}"/>
+										<Label id="_IDGenLabel20" text="Size"/>
+										<HBox id="_IDGenHBox2">
+											<Text id="Size" text="{/size}"/>
+											<Text id="Size2" class="sapUiTinyMarginBegin" text="{/measurement}"/>
+										</HBox>
+										<Link id="_IDGenLink3" press="editStepThree" text="Edit" />
+									</form:content>
+								</form:SimpleForm>
+
+								<form:SimpleForm id="_IDGenSimpleForm7"
+										title="4. Pricing"
+										minWidth="1024"
+										editable="false"
+										layout="ResponsiveGridLayout">
+									<form:content>
+										<Label id="_IDGenLabel21" text="Price"/>
+										<Text id="ProductPriceChosen" text="{/productPrice}"/>
+										<Label id="_IDGenLabel22" text="Discount Group"/>
+										<Text id="DiscountGroupChosen" text="{/discountGroup}"/>
+										<Label id="_IDGenLabel23" text="VAT Included"/>
+										<Text id="ProductVATChosen" text="{/productVAT}"/>
+										<Link id="_IDGenLink4" press="editStepFour" text="Edit" />
+									</form:content>
+								</form:SimpleForm>
+					</WizardStep> -->
+				</Wizard>
+			</f:content>
+
+			<f:footer>
+				<OverflowToolbar id="_IDGenOverflowToolbar1">
+					<ToolbarSpacer id="_IDGenToolbarSpacer1Wizard"/>
+					<Button id="_IDGenButton1" text="Previous" visible="{/backButtonVisible}" press="onDialogBackButton" />
+					<Button id="_IDGenButton2" text="Next Step" type="Emphasized" enabled="{/nextButtonEnabled}" visible="{/nextButtonVisible}" press="onDialogNextButton" />
+					<Button id="_IDGenButton3" text="Review" type="Emphasized" visible="{/reviewButtonVisible}" press="onDialogNextButton" />
+					<Button id="_IDGenButton4" text="Finish" type="Emphasized" visible="{/finishButtonVisible}" press="handleWizardSubmit" />
+					<Button id="_IDGenButton5"	text="Cancel" type="Transparent" press="handleWizardCancel"/>
+					<Button id="_IDGenButton6"	text="Close" type="Transparent" press="onCloseWizardCreateMatch"/>
+				</OverflowToolbar>
+			</f:footer>
+		</f:DynamicPage>
+	</Dialog>
+</core:FragmentDefinition>

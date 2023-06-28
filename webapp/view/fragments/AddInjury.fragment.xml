@@ -1,0 +1,89 @@
+
+<!-- ##### ELS FRAGMENTS ENS SERVEIX EN AQUEST EXEMPLE PER CREAR COM COMPONENTS, EN AQUEST CAS JUGADORS#### -->
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    
+    
+    <Dialog id="_IDGenDialogInjury"
+        draggable="true"
+        stretch="{device/system/phone}"
+        showHeader="true"
+        title="Historial de lesiones">
+
+
+        
+        <VBox id="_idVBoxInjury" class="sapUiSmallMargin">
+        <core:ExtensionPoint name="playersList" />
+		<f:SimpleForm id="SimpleFormChange354"
+
+        
+			editable="true"
+			layout="ColumnLayout" 
+			title="Añadir Lesion"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+             <core:Title id="idInjury2" text="{i18n>create.player.section1}"/>
+
+<!-- ######################### ESTRUCTURA PER LA CREACIO ######################################################### -->
+
+                <!-- ID Lesion -->
+				<Label id="idAddInjury2" text="ID" />
+				<Input id="idCreateInjury" type="Number" enabled="false">
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnElementData1" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+
+                </Input>
+                
+                <!-- FECHA LESION -->
+                <Label id="idAddInjury1.2" text="Fecha" />
+				<Input id="idFechaLesion" type="Date" required="true" >
+                    <layoutData>
+                        <f:ColumnElementData id="fechaLesion" cellsSmall="2" cellsLarge="2"/>
+                    </layoutData>
+                </Input>
+
+                <!-- TIPO LESION -->
+                <Label id="idTipoLesion" text="Tipo" />
+				<Input id="idTipoLesion1" type="Text" required="true" >
+                    <layoutData>
+                        <f:ColumnElementData id="idTipoLesion2" cellsSmall="2" cellsLarge="2"/>
+                    </layoutData>
+                </Input>
+
+                <!-- DIAS DE RECUPERACION -->
+                <Label id="idRecuperacion" text="Dias de Recuperacion" />
+				<Input id="idRecuperacion1" type="Number" required="true" >
+                    <layoutData>
+                        <f:ColumnElementData id="idRecuperacion2" cellsSmall="2" cellsLarge="2"/>
+                    </layoutData>
+                </Input>
+			</f:content>
+		</f:SimpleForm>       
+	</VBox>
+        
+<buttons>
+  <!-- Botones del diálogo  -->
+   <Button id="_IDGenButtonInjury1" text="Añadir" press="onAddInjury"/>
+   <Button id="_IDGenButtonInjury2" text="Cerrar" press="onCloseDialogInjury"/>
+   <Button id="_IDGenButtonResetInjury" text="Reset" press="resetDialogInjury"/>
+</buttons>
+        
+</Dialog>
+    
+</core:FragmentDefinition>

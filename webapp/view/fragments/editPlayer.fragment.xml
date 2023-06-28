@@ -1,0 +1,67 @@
+<!-- ##### ELS FRAGMENTS ENS SERVEIX EN AQUEST EXEMPLE PER CREAR COM COMPONENTS, EN AQUEST CAS JUGADORS#### -->
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    
+    
+    <Dialog id="_idDialogEditPlayer"
+        draggable="true"
+        stretch="{device/system/phone}"
+        showHeader="true"
+        title="Editar Informacion General">
+
+
+        
+        <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+        <core:ExtensionPoint name="playersList" />
+		<f:SimpleForm id="SimpleFormChange354"
+
+        
+			editable="true"
+			layout="ColumnLayout" 
+			title="EditarJugador"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+                <core:Title id="_IDGenTitleEditPlayer" text="Editar Jugador"/>
+
+<!-- ######################### ESTRUCTURA PER LA CREACIO ######################################################### -->
+
+                <!-- Ciudad del Jugador -->
+				<Label id="_IDGenLabel2" text="Ciudad" />
+				<Input id="idEditCity" type="Text" >
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnElementData1" cellsSmall="8" cellsLarge="8"/>
+                    </layoutData>
+
+                </Input>
+                
+                <!-- Añadir mas campos si es necesario -->
+                                 
+			</f:content>
+		</f:SimpleForm>
+        
+	</VBox>
+        
+<buttons>
+  <!-- Botones del diálogo  -->
+   <Button id="_IDGenButton1" text="Editar" press="onEditPlayer"/>
+   <Button id="_IDGenButton2" text="Cerrar" press="onCloseEditPlayerDialog"/>
+</buttons>
+        
+</Dialog>
+    
+</core:FragmentDefinition>

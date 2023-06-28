@@ -1,0 +1,123 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    
+    <Dialog id="_IDGenDialogCreatematch"
+        draggable="true"
+        stretch="{device/system/phone}"
+        showHeader="true"
+        title="Crea un Partido">
+
+        <VBox id="_IDGenVBox1CreateMatchFragment" class="sapUiSmallMargin">
+        <core:ExtensionPoint name="playersList" />
+		<f:SimpleForm id="SimpleFormChange354s"
+
+        
+			editable="true"
+			layout="ColumnLayout" 
+			title="Title form"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+                <core:Title id="_IDGenTitleCreateMatch" text="Crear Partido"/>
+
+<!-- ######################### ESTRUCTURA PER LA CREACIO ######################################################### -->
+
+                <!-- ID PARTIDO  -->
+                <Label id="idCreateMatchLabel" text="Id" />
+				<Input id="idCreateMatch" type="Number" enabled="false" >
+                    <layoutData>
+                        <f:ColumnElementData id="idCreateMatchColumn" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input>
+
+                <!-- ID Jugador1  -->
+                <Label id="idJugador1CreateMatchLabel" text="Id Jugador 1" />
+				<Input id="idJugador1" type="Number" required="true" >
+                    <layoutData>
+                        <f:ColumnElementData id="idJugador1CreateMatchColumn" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input>
+
+                <!-- ID Jugador2  -->
+                <Label id="idJugador2CreateMatchLabel" text="Id Jugador 2" />
+				<Input id="idJugador2" type="Number" required="true" >
+                    <layoutData>
+                        <f:ColumnElementData id="idJugador2CreateMatchColumn" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input>
+
+                <!-- Resultado Jugador Local  Primer Set-->
+                <Label id="lResultadoJLSet1" text="Set 1 Jugador Local" />
+				<Input id="idResultadoJLSet1" type="Number" required="true" >
+                    <layoutData>
+                        <f:ColumnElementData id="cResultadoJLSet1" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input>
+
+                 <!-- Resultado Jugador Visitante  Primer Set-->
+                <Label id="lResultadoJVSet1" text="Set 1 Jugador Visitante" />
+				<Input id="idResultadoJVSet1" type="Number" required="true" >
+                    <layoutData>
+                        <f:ColumnElementData id="cResultadoJVSet1" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input>
+
+                <!-- Resultado Jugador Local  Segundo Set-->
+                <Label id="lResultadoJLSet2" text="Set 2 Jugador Local" />
+				<Input id="idResultadoJLSet2" type="Number" required="true" >
+                    <layoutData>
+                        <f:ColumnElementData id="cResultadoJLSet2" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input>
+
+                 <!-- Resultado Jugador Visitante  Segundo Set-->
+                <Label id="lResultadoJVSet2" text="Set 2 Jugador Visitante" />
+				<Input id="idResultadoJVSet2" type="Number" required="true" >
+                    <layoutData>
+                        <f:ColumnElementData id="cResultadoJVSet2" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input>
+
+                <!-- Resultado Jugador Local  Tie Break-->
+                <Label id="lResultadoJL.TB" text="Tie Break Jugador Local" />
+				<Input id="idResultadoJLTB" type="Number" required="true" >
+                    <layoutData>
+                        <f:ColumnElementData id="cResultadoJL.TB" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input>
+
+                 <!-- Resultado Jugador Visitante  Tie Break-->
+                <Label id="lResultadoJV.TB" text="Tie Break Jugador Visitante" />
+				<Input id="idResultadoJVTB" type="Number" required="true" >
+                    <layoutData>
+                        <f:ColumnElementData id="cResultadoJV.TB" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input> 
+			</f:content>
+		</f:SimpleForm>
+        
+	</VBox>
+        
+<buttons>
+  <!-- Botones del diálogo  -->
+   <Button id="_IDGenButton1CreateMatch1" text="Crear Partido" press=".onAddMatch"/>
+   <Button id="_IDGenButton2CreateMatch1" text="Close" press=".onCloseDialogCreateMatch"/>
+</buttons>
+        
+</Dialog>
+    
+</core:FragmentDefinition>

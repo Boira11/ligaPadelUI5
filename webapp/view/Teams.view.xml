@@ -1,0 +1,12 @@
+<mvc:View
+    controllerName="padelmasterdetail.controller.Teams"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+
+    <Page id="_IDGenPage1" title="Teams Detail">
+        <content>
+            <Text id="_IDGenText1" text="Detail of teams goes here." />
+        </content>
+    </Page>
+
+</mvc:View>

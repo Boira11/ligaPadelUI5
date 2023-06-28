@@ -1,0 +1,934 @@
+{
+  "jugadores": [
+    {
+      "id": 0,
+      "nombre": "Juan Perez",
+      "sexo": "Masculino",
+      "poblacion": "Sant Feliu de Llobregat",
+      "nivel": "2.5",
+      "mano": "Diestro",
+      "Descripcion": "Mi habilidad tecnica es el golpeo de reves y prefiero jugar en la derecha, pero me adapto a cualquier posicion",
+      "edad": 34,
+      "altura": 1.8,
+      "peso": 82,
+      "tipo_raqueta": "Potencia",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "2.5",
+        "num_partidos_jugados": 25,
+        "num_partidos_ganados": 12
+      }
+    },
+    {
+      "id": 1,
+      "nombre": "Maria Garcia",
+      "poblacion": "Barcelona",
+      "nivel": "3.0",
+      "mano": "Zurdo",
+      "Descripcion": "Me destaco en el juego en la red y prefiero jugar en la izquierda",
+      "edad": 22,
+      "altura": 1.62,
+      "peso": 60,
+      "tipo_raqueta": "Equilibrio",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "3.0",
+        "num_partidos_jugados": 40,
+        "num_partidos_ganados": 28
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "Pedro Sanchez",
+      "poblacion": "Madrid",
+      "nivel": "4.5",
+      "mano": "Diestro",
+      "Descripcion": "Soy un jugador experimentado y me destaco en el juego de fondo de pista",
+      "edad": 24,
+      "altura": 1.8,
+      "peso": 80,
+      "tipo_raqueta": "Equilibrio",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "4.5",
+        "num_partidos_jugados": 60,
+        "num_partidos_ganados": 52
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Laura Martinez",
+      "poblacion": "Valencia",
+      "nivel": "2.0",
+      "mano": "Zurdo",
+      "Descripcion": "Soy una jugadora principiante y me gustaría mejorar mi técnica",
+      "edad": 30,
+      "altura": 1.8,
+      "peso": 75,
+      "tipo_raqueta": "Lagrima",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "2.0",
+        "num_partidos_jugados": 10,
+        "num_partidos_ganados": 1
+      }
+    },
+    {
+      "id": 4,
+      "nombre": "Carlos Rodriguez",
+      "poblacion": "Sevilla",
+      "nivel": "3.5",
+      "mano": "Diestro",
+      "Descripcion": "Soy un jugador versátil que se adapta a cualquier posición en la pista",
+      "edad": 30,
+      "altura": 1.8,
+      "peso": 75,
+      "tipo_raqueta": "lagrima",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "3.5",
+        "num_partidos_jugados": 30,
+        "num_partidos_ganados": 20
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "Ana Garcia",
+      "poblacion": "Barcelona",
+      "nivel": "2.5",
+      "mano": "Zurdo",
+      "Descripcion": "Me gustaría mejorar mi técnica en el juego de red",
+      "edad": 19,
+      "altura": 1.55,
+      "peso": 49,
+      "tipo_raqueta": "Potencia",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "2.5",
+        "num_partidos_jugados": 20,
+        "num_partidos_ganados": 10
+      }
+    },
+    {
+      "id": 6,
+      "nombre": "Antonio Martinez",
+      "poblacion": "Alicante",
+      "nivel": "3.5",
+      "mano": "Diestro",
+      "Descripcion": "Soy un jugador de buen nivel con habilidades en todos los aspectos del juego",
+      "edad": 30,
+      "altura": 1.8,
+      "peso": 75,
+      "tipo_raqueta": "Potencia",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "3.5",
+        "num_partidos_jugados": 50,
+        "num_partidos_ganados": 35
+      }
+    },
+    {
+      "id": 7,
+      "nombre": "Marta Fernandez",
+      "poblacion": "Madrid",
+      "nivel": "4.0",
+      "mano": "Zurdo",
+      "Descripcion": "Me destaco en el juego en la red y tengo una gran habilidad para los globos",
+      "edad": 30,
+      "altura": 1.8,
+      "peso": 75,
+      "tipo_raqueta": "Control",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "4.0",
+        "num_partidos_jugados": 70,
+        "num_partidos_ganados": 55
+      }
+    },
+    {
+      "id": 8,
+      "nombre": "David Garcia",
+      "poblacion": "Barcelona",
+      "nivel": "2.5",
+      "mano": "Diestro",
+      "Descripcion": "Soy un jugador principiante que quiere mejorar en el juego de red",
+      "edad": 30,
+      "altura": 1.8,
+      "peso": 75,
+      "tipo_raqueta": "Potencia",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "2.5",
+        "num_partidos_jugados": 15,
+        "num_partidos_ganados": 5
+      }
+    },
+    {
+      "id": 9,
+      "nombre": "Sara Rodriguez",
+      "poblacion": "Valencia",
+      "nivel": "3.0",
+      "mano": "Zurdo",
+      "Descripcion": "Soy una jugadora de nivel intermedio que se adapta a cualquier posición en la pista",
+      "edad": 30,
+      "altura": 1.8,
+      "peso": 75,
+      "tipo_raqueta": "Control",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "3.0",
+        "num_partidos_jugados": 35,
+        "num_partidos_ganados": 20
+      }
+    },
+    {
+      "id": 10,
+      "nombre": "Javier Jimenez",
+      "poblacion": "Sevilla",
+      "nivel": "4.5",
+      "mano": "Diestro",
+      "Descripcion": "Soy un jugador experimentado con gran habilidad en el juego de red y las voleas",
+      "edad": 30,
+      "altura": 1.8,
+      "peso": 75,
+      "tipo_raqueta": "Potencia",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "4.5",
+        "num_partidos_jugados": 80,
+        "num_partidos_ganados": 70
+      }
+    },
+    {
+      "id": 11,
+      "nombre": "Ana Lopez",
+      "poblacion": "Granada",
+      "nivel": "2.0",
+      "mano": "Zurdo",
+      "Descripcion": "Soy una jugadora principiante que quiere mejorar la colocacion y  el juego en defensa",
+      "edad": 30,
+      "altura": 1.8,
+      "peso": 75,
+      "tipo_raqueta": "Potencia",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "2.0",
+        "num_partidos_jugados": 5,
+        "num_partidos_ganados": 1
+      }
+    },
+    {
+      "id": 12,
+      "nombre": "Carlos Ruiz",
+      "poblacion": "Barcelona",
+      "nivel": "3.5",
+      "mano": "Diestro",
+      "Descripcion": "Estoy interesado en mejorar mi servicio y mi volea. Me encanta el juego de ataque",
+      "edad": 27,
+      "altura": 1.85,
+      "peso": 80,
+      "tipo_raqueta": "Control",
+      "tipo_grip": "Replacement Grip",
+      "posicion_cancha": "Izquierda",
+      "estadisticas": {
+        "nivel": "3.5",
+        "num_partidos_jugados": 15,
+        "num_partidos_ganados": 8
+      }
+    },
+    {
+      "id": 13,
+      "nombre": "Lucia Ramos",
+      "poblacion": "Madrid",
+      "nivel": "2.5",
+      "mano": "Zurda",
+      "Descripcion": "Jugadora intermedia, me gusta jugar en la red pero necesito mejorar mi saque",
+      "edad": 32,
+      "altura": 1.65,
+      "peso": 60,
+      "tipo_raqueta": "Potencia",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "2.5",
+        "num_partidos_jugados": 12,
+        "num_partidos_ganados": 5
+      }
+    },
+    {
+      "id": 14,
+      "nombre": "Antonio Fernandez",
+      "poblacion": "Sevilla",
+      "nivel": "4.0",
+      "mano": "Diestro",
+      "Descripcion": "Soy un jugador avanzado que desea perfeccionar la táctica y estrategia en cancha",
+      "edad": 35,
+      "altura": 1.78,
+      "peso": 78,
+      "tipo_raqueta": "Control",
+      "tipo_grip": "Replacement Grip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "4.0",
+        "num_partidos_jugados": 25,
+        "num_partidos_ganados": 18
+      }
+    },
+    {
+      "id": 15,
+      "nombre": "Marta Perez",
+      "poblacion": "Valencia",
+      "nivel": "2.0",
+      "mano": "Zurda",
+      "Descripcion": "Jugadora principiante que busca mejorar el fondo de la cancha y la colocación",
+      "edad": 25,
+      "altura": 1.70,
+      "peso": 65,
+      "tipo_raqueta": "Potencia",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Izquierda",
+      "estadisticas": {
+        "nivel": "2.0",
+        "num_partidos_jugados": 7,
+        "num_partidos_ganados": 2
+      }
+    },
+    {
+      "id": 16,
+      "nombre": "Pablo Gutierrez",
+      "poblacion": "Zaragoza",
+      "nivel": "3.0",
+      "mano": "Diestro",
+      "Descripcion": "Jugador de nivel intermedio buscando mejorar el juego en la red",
+      "edad": 33,
+      "altura": 1.75,
+      "peso": 70,
+      "tipo_raqueta": "Potencia",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "3.0",
+        "num_partidos_jugados": 20,
+        "num_partidos_ganados": 10
+      }
+    },
+    {
+      "id": 17,
+      "nombre": "Sofia Jimenez",
+      "poblacion": "Bilbao",
+      "nivel": "1.5",
+      "mano": "Zurda",
+      "Descripcion": "Principiante con mucha motivación para mejorar en todos los aspectos",
+      "edad": 24,
+      "altura": 1.65,
+      "peso": 55,
+      "tipo_raqueta": "Potencia",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Izquierda",
+      "estadisticas": {
+        "nivel": "1.5",
+        "num_partidos_jugados": 3,
+        "num_partidos_ganados": 0
+      }
+    },
+    {
+      "id": 18,
+      "nombre": "Javier Mendoza",
+      "poblacion": "Salamanca",
+      "nivel": "4.0",
+      "mano": "Diestro",
+      "Descripcion": "Jugador avanzado enfocado en mejorar el saque y volea",
+      "edad": 38,
+      "altura": 1.85,
+      "peso": 82,
+      "tipo_raqueta": "Control",
+      "tipo_grip": "Replacement Grip",
+      "posicion_cancha": "Derecha",
+      "estadisticas": {
+        "nivel": "4.0",
+        "num_partidos_jugados": 30,
+        "num_partidos_ganados": 20
+      }
+    },
+    {
+      "id": 19,
+      "nombre": "Patricia Diaz",
+      "poblacion": "A Coruña",
+      "nivel": "2.5",
+      "mano": "Zurda",
+      "Descripcion": "Intermedia buscando mejorar la colocación y las devoluciones",
+      "edad": 29,
+      "altura": 1.7,
+      "peso": 63,
+      "tipo_raqueta": "Lagrima",
+      "tipo_grip": "Overgrip",
+      "posicion_cancha": "Izquierda",
+      "estadisticas": {
+        "nivel": "2.5",
+        "num_partidos_jugados": 15,
+        "num_partidos_ganados": 7
+      }
+    }
+    
+            
+
+    
+  ],
+  "edad": [
+    {
+      "key": "10",
+      "edad": "10"
+    },
+    {
+      "key": "11",
+      "edad": "11"
+    },
+    {
+      "key": "12",
+      "edad": "12"
+    },
+    {
+      "key": "13",
+      "edad": "13"
+    },
+    {
+      "key": "14",
+      "edad": "14"
+    },
+    {
+      "key": "15",
+      "edad": "15"
+    },
+    {
+      "key": "16",
+      "edad": "16"
+    },
+    {
+      "key": "17",
+      "edad": "17"
+    },
+    {
+      "key": "18",
+      "edad": "18"
+    },
+    {
+      "key": "19",
+      "edad": "19"
+    },
+    {
+      "key": "20",
+      "edad": "20"
+    },
+    {
+      "key": "21",
+      "edad": "21"
+    },
+    {
+      "key": "22",
+      "edad": "22"
+    },
+    {
+      "key": "23",
+      "edad": "23"
+    },
+    {
+      "key": "24",
+      "edad": "24"
+    },
+    {
+      "key": "25",
+      "edad": "25"
+    },
+    {
+      "key": "26",
+      "edad": "26"
+    },
+    {
+      "key": "27",
+      "edad": "27"
+    },
+    {
+      "key": "28",
+      "edad": "28"
+    },
+    {
+      "key": "29",
+      "edad": "29"
+    },
+    {
+      "key": "30",
+      "edad": "30"
+    },
+    {
+      "key": "31",
+      "edad": "31"
+    },
+    {
+      "key": "32",
+      "edad": "32"
+    },
+    {
+      "key": "33",
+      "edad": "33"
+    },
+    {
+      "key": "34",
+      "edad": "34"
+    },
+    {
+      "key": "35",
+      "edad": "35"
+    },
+    {
+      "key": "36",
+      "edad": "36"
+    },
+    {
+      "key": "37",
+      "edad": "37"
+    },
+    {
+      "key": "38",
+      "edad": "38"
+    },
+    {
+      "key": "39",
+      "edad": "39"
+    },
+    {
+      "key": "40",
+      "edad": "40"
+    },
+    {
+      "key": "41",
+      "edad": "41"
+    },
+    {
+      "key": "42",
+      "edad": "42"
+    },
+    {
+      "key": "43",
+      "edad": "43"
+    },
+    {
+      "key": "44",
+      "edad": "44"
+    },
+    {
+      "key": "45",
+      "edad": "45"
+    },
+    {
+      "key": "46",
+      "edad": "46"
+    },
+    {
+      "key": "47",
+      "edad": "47"
+    },
+    {
+      "key": "48",
+      "edad": "48"
+    },
+    {
+      "key": "49",
+      "edad": "49"
+    },
+    {
+      "key": "50",
+      "edad": "50"
+    },
+    {
+      "key": "51",
+      "edad": "51"
+    },
+    {
+      "key": "52",
+      "edad": "52"
+    },
+    {
+      "key": "53",
+      "edad": "53"
+    },
+    {
+      "key": "54",
+      "edad": "54"
+    },
+    {
+      "key": "55",
+      "edad": "55"
+    },
+    {
+      "key": "56",
+      "edad": "56"
+    },
+    {
+      "key": "57",
+      "edad": "57"
+    },
+    {
+      "key": "58",
+      "edad": "58"
+    },
+    {
+      "key": "59",
+      "edad": "59"
+    },
+    {
+      "key": "60",
+      "edad": "60"
+    }
+  ],
+  "historialLesiones": [
+    {
+      "idJugador": 0,
+      "idLesion": 1,
+      "Fecha": null,
+      "Tipo": "Esguince",
+      "RecuperacionDias": 32
+    },
+    {
+      "idJugador": 0,
+      "idLesion": 2,
+      "Fecha": null,
+      "Tipo": "Esguince",
+      "RecuperacionDias": 43
+    },
+    {
+      "idJugador": 2,
+      "idLesion": 1,
+      "Fecha": null,
+      "Tipo": "Esguince",
+      "RecuperacionDias": 32
+    },
+    {
+      "idJugador": 7,
+      "idLesion": 1,
+      "Fecha": "2023-05-10",
+      "Tipo": "Esguince de tobillo",
+      "RecuperacionDias": 30
+    },
+    {
+      "idJugador": 15,
+      "idLesion": 2,
+      "Fecha": "2023-05-18",
+      "Tipo": "Rotura de ligamento",
+      "RecuperacionDias": 120
+    },
+    {
+      "idJugador": 12,
+      "idLesion": 3,
+      "Fecha": "2023-04-20",
+      "Tipo": "Tendinitis",
+      "RecuperacionDias": 40
+    },
+    {
+      "idJugador": 3,
+      "idLesion": 4,
+      "Fecha": "2023-05-22",
+      "Tipo": "Fractura de muñeca",
+      "RecuperacionDias": 60
+    },
+    {
+      "idJugador": 11,
+      "idLesion": 5,
+      "Fecha": "2023-05-15",
+      "Tipo": "Lesión de menisco",
+      "RecuperacionDias": 90
+    },
+    {
+      "idJugador": 8,
+      "idLesion": 6,
+      "Fecha": "2023-05-28",
+      "Tipo": "Desgarro muscular",
+      "RecuperacionDias": 45
+    },
+    {
+      "idJugador": 0,
+      "idLesion": 7,
+      "Fecha": "2023-04-30",
+      "Tipo": "Tendinitis",
+      "RecuperacionDias": 35
+    },
+    {
+      "idJugador": 5,
+      "idLesion": 8,
+      "Fecha": "2023-05-10",
+      "Tipo": "Fractura de codo",
+      "RecuperacionDias": 70
+    },
+    {
+      "idJugador": 9,
+      "idLesion": 9,
+      "Fecha": "2023-05-18",
+      "Tipo": "Lesión de hombro",
+      "RecuperacionDias": 60
+    },
+    {
+      "idJugador": 2,
+      "idLesion": null,
+      "Fecha": "2023-05-25",
+      "Tipo": "Esguince de rodilla",
+      "RecuperacionDias": 45
+    },
+    {
+      "idJugador": 10,
+      "idLesion": 11,
+      "Fecha": "2023-05-28",
+      "Tipo": "Esguince de muñeca",
+      "RecuperacionDias": 25
+    },
+    {
+      "idJugador": 14,
+      "idLesion": 12,
+      "Fecha": "2023-06-10",
+      "Tipo": "Lesión de codo",
+      "RecuperacionDias": 45
+    },
+    {
+      "idJugador": 4,
+      "idLesion": 13,
+      "Fecha": "2023-04-25",
+      "Tipo": "Tendinitis",
+      "RecuperacionDias": 40
+    },
+    {
+      "idJugador": 16,
+      "idLesion": 14,
+      "Fecha": "2023-05-08",
+      "Tipo": "Fractura de tobillo",
+      "RecuperacionDias": 80
+    },
+    {
+      "idJugador": 18,
+      "idLesion": 15,
+      "Fecha": "2023-05-15",
+      "Tipo": "Rotura de ligamento cruzado",
+      "RecuperacionDias": 180
+    },
+    {
+      "idJugador": 1,
+      "idLesion": 16,
+      "Fecha": "2023-05-20",
+      "Tipo": "Esguince de rodilla",
+      "RecuperacionDias": 45
+    },
+    {
+      "idJugador": 19,
+      "idLesion": 17,
+      "Fecha": "2023-05-12",
+      "Tipo": "Lesión de hombro",
+      "RecuperacionDias": 55
+    },
+    {
+      "idJugador": 6,
+      "idLesion": 18,
+      "Fecha": "2023-05-22",
+      "Tipo": "Desgarro muscular",
+      "RecuperacionDias": 30
+    },
+    {
+      "idJugador": 17,
+      "idLesion": 19,
+      "Fecha": "2023-06-05",
+      "Tipo": "Lesión de menisco",
+      "RecuperacionDias": 90
+    },
+    {
+      "idJugador": 13,
+      "idLesion": 20,
+      "Fecha": "2023-06-01",
+      "Tipo": "Esguince de tobillo",
+      "RecuperacionDias": 30
+    }
+                                        
+                                        
+  ],
+
+
+  "Partidos": [
+    { "idJugador1":1,
+      "idJugador2":2,
+      "idPartido": 1,
+      "jugadorLocal": "",
+      "jugadorVisitante": "",
+      "Set1Local": 6,
+      "Set1Visitante": 4,
+      "Set2Local": 6,
+      "Set2Visitante": 3,
+      "TieBreakLocal": null,
+      "TieBreakVisitante": null
+    },
+    { "idJugador1":1,
+    "idJugador2":2,
+    "idPartido": 2,
+    "jugadorLocal": "",
+    "jugadorVisitante": "",
+    "Set1Local": 6,
+    "Set1Visitante": 2,
+    "Set2Local": 6,
+    "Set2Visitante": 4,
+    "TieBreakLocal": null,
+    "TieBreakVisitante": null
+  },
+
+  { "idJugador1":2,
+    "idJugador2":6,
+    "idPartido": 3,
+    "jugadorLocal": "",
+    "jugadorVisitante": "",
+    "Set1Local": 6,
+    "Set1Visitante": 2,
+    "Set2Local": 6,
+    "Set2Visitante": 4,
+    "TieBreakLocal": null,
+    "TieBreakVisitante": null
+  },
+
+  { "idJugador1":5,
+  "idJugador2":8,
+  "idPartido": 4,
+  "jugadorLocal": "Prueba1",
+  "jugadorVisitante": "Prueba2",
+  "Set1Local": 6,
+  "Set1Visitante": 2,
+  "Set2Local": 6,
+  "Set2Visitante": 4,
+  "TieBreakLocal": null,
+  "TieBreakVisitante": null
+}
+  ],
+  "cities": [
+    {
+      "key": "Barcelona",
+      "city": "Barcelona"
+    },
+    {
+      "key": "Girona",
+      "city": "Girona"
+    },
+    {
+      "key": "Tarragona",
+      "city": "Tarragona"
+    },
+    {
+      "key": "Lleida",
+      "city": "Lleida"
+    },
+    {
+      "key": "Reus",
+      "city": "Reus"
+    },
+    {
+      "key": "Sabadell",
+      "city": "Sabadell"
+    },
+    {
+      "key": "Terrassa",
+      "city": "Terrassa"
+    },
+    {
+      "key": "Badalona",
+      "city": "Badalona"
+    },
+    {
+      "key": "Cerdanyola del Vallès",
+      "city": "Cerdanyola del Vallès"
+    },
+    {
+      "key": "Mataró",
+      "city": "Mataró"
+    },
+    {
+      "key": "Santa Coloma de Gramenet",
+      "city": "Santa Coloma de Gramenet"
+    },
+    {
+      "key": "Manresa",
+      "city": "Manresa"
+    },
+    {
+      "key": "Vilanova i la Geltrú",
+      "city": "Vilanova i la Geltrú"
+    },
+    {
+      "key": "Castelldefels",
+      "city": "Castelldefels"
+    },
+    {
+      "key": "Granollers",
+      "city": "Granollers"
+    },
+    {
+      "key": "Cornellà de Llobregat",
+      "city": "Cornellà de Llobregat"
+    },
+    {
+      "key": "Sant Boi de Llobregat",
+      "city": "Sant Boi de Llobregat"
+    },
+    {
+      "key": "El Prat de Llobregat",
+      "city": "El Prat de Llobregat"
+    },
+    {
+      "key": "Sant Feliu de Llobregat",
+      "city": "Sant Feliu de Llobregat"
+    },
+    {
+      "key": "Esplugues de Llobregat",
+      "city": "Esplugues de Llobregat"
+    },
+    {
+      "key": "Madrid",
+      "city": "Madrid"
+    },
+    {
+      "key": "Valencia",
+      "city": "Valencia"
+    },
+    {
+      "key": "Alicante",
+      "city": "Alicante"
+    },
+    {
+      "key": "Sevilla",
+      "city": "Sevilla"
+    },
+    {
+      "key": "Granada",
+      "city": "Granada"
+    }
+  ],
+  "raqueta": [
+    {
+      "key": "Potencia",
+      "raqueta": "Potencia"
+    },
+    {
+      "key": "Control",
+      "raqueta": "Control"
+    },
+    {
+      "key": "Equilibrio",
+      "raqueta": "Equilibrio"
+    },
+    {
+      "key": "Lagrima",
+      "raqueta": "Lagrima"
+    }
+  ]
+}

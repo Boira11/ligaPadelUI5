@@ -1,0 +1,276 @@
+<mvc:View
+	controllerName="padelmasterdetail.controller.PlayerDetail"
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:f="sap.f"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc">
+	<ObjectPageLayout
+		id="ObjectPageLayout"
+		showTitleInHeaderContent="true"
+		alwaysShowContentHeader="false"
+		preserveHeaderStateOnScroll="false"
+		headerContentPinnable="true"
+		isChildPage="true"
+		upperCaseAnchorBar="false">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle id="_IDGenObjectPageDynamicHeaderTitle1">
+				<actions>
+					<m:ObjectHeader id="playerHeader" title="{jugadoresPadelModel>/nombre}"/>
+					<m:Button  id="_IDGenToggleButton1"
+						text="Edit"
+						type="Emphasized"
+						press=".openDialogEditPlayer"/>
+					<m:Button id="_IDGenButton1.1"
+						text="Delete"
+						type="Transparent"
+						press=".onDeletePlayerButtonPress"/>
+					
+					<m:OverflowToolbarButton id="declineBtn" type="Transparent" icon="sap-icon://decline" press="onCloseDetailPress"  tooltip="Close middle column"/>
+								
+				</actions>
+				
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+
+		<headerContent>
+			<m:FlexBox id="_IDGenFlexBox1" wrap="Wrap" fitContainer="true" alignItems="Stretch">
+				<m:Avatar id="_IDGenAvatar2" src="sap-icon://study-leave" displaySize="S" class="sapUiTinyMarginEnd"/>
+				<m:VBox id="_IDGenVBox_idhd" justifyContent="Center" class="sapUiSmallMarginEnd">
+					<m:Label id="_IDGenLabel1" text="Nombre"/>
+					<m:Text id="Nombre1" text="{jugadoresPadelModel>/nombre}"/>
+				</m:VBox>
+				<m:VBox id="_IDGenVBox2" justifyContent="Center" class="sapUiSmallMarginEnd">
+					<m:Label id="_LabelEdad" text="Edad"/>
+					<m:Text id="edad" text="{jugadoresPadelModel>/edad}"/>
+				</m:VBox>
+				<m:VBox id="_IDGenVBox3" justifyContent="Center" class="sapUiSmallMarginEnd">
+					<m:Label id="_IDGenLabel3" text="Poblacion"/>
+					<m:Text id="poblacion" text="{jugadoresPadelModel>/poblacion}"/>
+				</m:VBox>
+			</m:FlexBox>
+		</headerContent>
+
+		<sections>
+			<ObjectPageSection id="_IDGenObjectPageSection1" title="Informacion General ">
+				<subSections>
+					<ObjectPageSubSection id="_IDGenObjectPageSubSection1" >
+						<blocks>
+							<form:SimpleForm id="_IDGenSimpleForm1"
+								maxContainerCols="2"
+								editable="false"
+								layout="ResponsiveGridLayout"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content>
+									<m:Label id="_IDGenLabel4" text="ID Jugador"/>
+									<m:Text id="_Id" text="{jugadoresPadelModel>/id}"/>
+									<m:Label id="_IDGenLabel5" text="Nombre"/>
+									<m:Text id="Nombre" text="{jugadoresPadelModel>/nombre}"/>
+									<m:Label id="_IDGenLabel11" text="Edad"/>
+									<m:Text id="Edad" text="{jugadoresPadelModel>/edad}"/>
+									<m:Label id="_IDGenLabel6" text="Sexo"/>
+									<m:Text id="Sexo" text="{jugadoresPadelModel>/sexo}"/>
+									<m:Label id="_IDGenLabel7" text="Población"/>
+									<m:Text id="Poblacion" text="{jugadoresPadelModel>/poblacion}"/>
+									<m:Label id="_IDGenLabel12" text="Altura"/>
+									<m:Text id="Altura" text="{jugadoresPadelModel>/altura}"/>
+									<m:Label id="_IDGenLabel13" text="Peso"/>
+									<m:Text id="Peso" text="{jugadoresPadelModel>/peso}"/>
+
+								</form:content>
+							</form:SimpleForm>
+						</blocks>
+					</ObjectPageSubSection>
+					
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection id="_IDGenObjectPageSection1.2" title="Detalles Jugador">
+				<subSections>
+				
+					<ObjectPageSubSection id="_IDGenObjectPageSubSection1.2" >
+						<blocks>
+							<form:SimpleForm id="_IDGenSimpleForm1.2"
+								maxContainerCols="2"
+								editable="false"
+								layout="ResponsiveGridLayout"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content>
+								
+									<m:Label id="_IDGenLabel8" text="Nivel"/>
+									<m:Text id="Nivel" text="{jugadoresPadelModel>/nivel}"/>
+									<m:Label id="_IDGenLabel9" text="Mano"/>
+									<m:Text id="_mano" text="{jugadoresPadelModel>/mano}"/>
+									<m:Label id="_IDGenLabel10" text="Descripción"/>
+									<m:Text id="Descripcion" text="{jugadoresPadelModel>/Descripcion}"/>
+									<m:Label id="_IDGenLabel14" text="Tipo de raqueta"/>
+									<m:Text id="TipoRaqueta" text="{jugadoresPadelModel>/tipo_raqueta}"/>
+									<m:Label id="_IDGenLabel15" text="Tipo de grip"/>
+									<m:Text id="TipoGrip" text="{jugadoresPadelModel>/tipo_grip}"/>
+									<m:Label id="_IDGenLabel16" text="Posición en la cancha"/>
+									<m:Text id="PosicionCancha" text="{jugadoresPadelModel>/posicion_cancha}"/>
+								</form:content>
+							</form:SimpleForm>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			
+
+			<ObjectPageSection id="_IDGenObjectPageSection2" title="Estadisticas">
+				<subSections>
+					<ObjectPageSubSection id="_IDGenObjectPageSubSection2">
+						<blocks>
+						<form:SimpleForm id="_IDGenSimpleForm1.3"
+								maxContainerCols="2"
+								editable="false"
+								layout="ResponsiveGridLayout"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content>
+								
+									
+									<m:Label id="_IDGenLabel17" text="Estadísticas - Nivel"/>
+									<m:Text id="EstadisticasNivel" text="{jugadoresPadelModel>/estadisticas/nivel}"/>
+									<m:Label id="_IDGenLabel18" text="Estadísticas - Partidos jugados"/>
+									<m:Text id="EstadisticasPartidosJugados" text="{jugadoresPadelModel>/estadisticas/num_partidos_jugados}"/>
+									<m:Label id="_IDGenLabel19" text="Estadísticas - Partidos ganados"/>
+									<m:Text id="EstadisticasPartidosGanados" text="{jugadoresPadelModel>/estadisticas/num_partidos_ganados}"/>
+								</form:content>
+							</form:SimpleForm>
+						
+							
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection id="_IDGenObjectPageSection3" title="Partidos">
+				<subSections>
+					<ObjectPageSubSection id="_IDGenObjectPageSubSection3">
+						<blocks>
+					
+<m:Table id="tablaPartidos" mode="SingleSelectMaster" growing="true" growingThreshold="20" growingScrollToLoad="true" items="{path: 'partidos>/partidos'}">
+
+    <m:headerToolbar>
+        <m:Toolbar id="_IDGe1nToolbar2">
+            <m:Title id="_IDGenT1itle2" text="Detalles de los partidos"/>
+			 <m:ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+			 <m:OverflowToolbarButton id="_idButtonAddMatch" icon="sap-icon://add" type="Transparent" press=".onOpenFragmentCreateMatch"/>   
+			<!-- <m:OverflowToolbarButton id="_idButtonAddMatchWizard" icon="sap-icon://add" text="Add" type="Transparent" press=".onOpenFragmentCreateMatchWizard"/>   -->
+            <m:OverflowToolbarButton id="idButtonEditMatch" icon="sap-icon://edit" type="Transparent" press=".onEditMatch"/>   
+        </m:Toolbar>
+    </m:headerToolbar>
+    <m:columns>
+	<m:Column id="_IDGenC1olumnId">
+            <m:Text id="_IDGen1Text1ID" text="ID"/>
+        </m:Column>
+        <m:Column id="_IDGenC1olumn1">
+            <m:Text id="_IDGen1Text1" text="Local"/>
+        </m:Column>
+        <m:Column id="_IDGenC1olumn2">
+            <m:Text id="_IDGe1nText2" text="Visitante"/>
+        </m:Column>
+        <m:Column id="_IDGenCo1lumn3">
+            <m:Text id="_IDGen1Text3" text="Primer Set"/>
+        </m:Column>
+        <m:Column id="_IDGenCo1lumn4">
+            <m:Text id="_IDGen1Text4" text="Segundo Set"/>
+        </m:Column>
+		<m:Column id="idColumnTieBreak">
+            <m:Text id="_textTiebreak" text="Tie Break"/>
+        </m:Column>
+    </m:columns>
+    <m:items>
+        <!-- Los items de la tabla irían aquí -->
+		<m:ColumnListItem id="_IDGenC1olumnListItem1">
+      <!-- Aquí defines cómo se deben mostrar los datos de cada partido -->
+      <m:cells>
+	  	<m:Text id="_IDGenTextIdPartido" text="{partidos>idPartido}" />
+        <m:Text id="_IDGen1Text5" text="{partidos>jugadorLocal}" />
+        <m:Text id="_IDGen1Text6" text="{partidos>jugadorVisitante}" />
+        <m:Text id="_IDGen1Text7" text="{partidos>Set1Local} - {partidos>Set1Visitante}" />
+        <m:Text id="_IDGenT1ext8" text="{partidos>Set2Local} - {partidos>Set2Visitante}" />
+		 <m:Text id="_IDGenT1ext9" text="{partidos>TieBreakLocal} - {partidos>TieBreakVisitante}" />
+      </m:cells>
+    </m:ColumnListItem>
+    </m:items>
+</m:Table>		
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+<ObjectPageSection id="detailViewSectionLesiones" title="Historial de Lesiones">
+  <subSections>
+    <ObjectPageSubSection id="detailViewSectionLesiones1">
+      <blocks>
+
+            <!-- Agrega aquí los campos del formulario -->
+
+	<m:Table id="injuryTable" mode="SingleSelectMaster" growing="true" growingThreshold="20" growingScrollToLoad="true" items="{path: 'lesiones>/lesiones'}">
+		<m:headerToolbar>
+        <m:Toolbar id="_IDGenToolbar2">
+            <m:Title id="_IDGenTitle2" text="Detalles de las lesiones"/>
+			 <m:ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+			<m:OverflowToolbarButton id="_IDGenOverflowToolbarButton22" icon="sap-icon://add" type="Transparent" press=".onOpenFragmentInjury"/>   
+            <m:OverflowToolbarButton id="_IDGenOverflowToolbarBu2tton3" icon="sap-icon://edit" type="Transparent" press=".onEditInjury"/>   
+        </m:Toolbar>
+    </m:headerToolbar>
+    <m:columns>
+        <m:Column id="_IDGenColumn1">
+            <m:Text id="_IDGenText1" text="ID"/>
+        </m:Column>
+        <m:Column id="_IDGenColumn2">
+            <m:Text id="_IDGenText2" text="Fecha"/>
+        </m:Column>
+        <m:Column id="_IDGenColumn3">
+            <m:Text id="_IDGenText3" text="Tipo"/>
+        </m:Column>
+        <m:Column id="_IDGenColumn4">
+            <m:Text id="_IDGenText4" text="Recuperación"/>
+        </m:Column>
+    </m:columns>
+    <m:items>
+        <!-- Los items de la tabla irían aquí -->
+		<m:ColumnListItem id="_IDGenColumnListItem1">
+      <!-- Aquí defines cómo se deben mostrar los datos de cada lesión -->
+      <m:cells>
+        <m:Text id="_IDGenText5" text="{lesiones>idLesion}" />
+        <m:Text id="_IDGenText6" text="{lesiones>Fecha}" />
+        <m:Text id="_IDGenText7" text="{lesiones>Tipo}" />
+        <m:Text id="_IDGenText8" text="{lesiones>RecuperacionDias}" />
+      </m:cells>
+    </m:ColumnListItem>
+    </m:items>
+</m:Table>
+      </blocks>
+    </ObjectPageSubSection>
+  </subSections>
+</ObjectPageSection>
+		</sections>
+
+		<!-- <footer>
+			<m:OverflowToolbar id="_IDGenOverflowToolbar1">
+				<m:ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+				<m:Button id="_IDGenButton4" type="Accept" text="Save"/>
+				<m:Button id="_IDGenButton5" type="Reject" text="Cancel"/>
+			</m:OverflowToolbar>
+		</footer> -->
+	</ObjectPageLayout>
+</mvc:View>

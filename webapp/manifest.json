@@ -1,0 +1,158 @@
+{
+  "_version": "1.49.0",
+  "sap.app": {
+    "id": "padelmasterdetail",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.9.4",
+      "toolsId": "45287ae7-7978-4215-86f4-3acf47301314"
+    },
+    "dataSources": {
+      "model" : {
+        "uri" : "model/jugadoresPadel.json",
+        "type" : "JSON"
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.110.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "padelmasterdetail.i18n.i18n"
+        }
+      },
+      "jugadoresPadel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "model"
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "config": {
+      "fullWidth": true,
+      "serviceConfig": {},
+      "sample": {
+        "stretch": true,
+        "files": [
+          "jugadoresPadeljson"
+        ]
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "padelmasterdetail.view",
+        "controlAggregation": "beginColumnPages",
+        "controlId": "layout",
+        "transition": "slide",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteMain",
+          "pattern": "",
+          "target": [
+            "TargetMain"
+          ]
+        },
+        {
+          "name": "playerDetail",
+          "pattern": "playerDetail/{playerId}",
+          "target": [
+            "TargetMain",
+            "playerDetail"
+          ]
+        },
+
+        {
+          "name": "TeamsDetail",
+          "pattern": "TeamsDetail",
+          "target": [
+              "TargetMain",
+              "Teams"
+          ]
+      }
+      ],
+      "targets": {
+        "TargetMain": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Main",
+          "viewName": "Main",
+          "controlAggregation": "beginColumnPages"
+        },
+        "playerDetail": {
+          "viewName": "PlayerDetail",
+          "viewLevel": 1,
+          "viewId": "playerDetail",
+          "controlAggregation": "midColumnPages"
+        },
+        
+        "Teams": {
+          "viewName": "Teams",
+          "viewLevel": 2,
+          "viewId": "Teams",
+          "controlAggregation": "endColumnPages"
+      }
+      }
+    },
+    "rootView": {
+      "viewName": "padelmasterdetail.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

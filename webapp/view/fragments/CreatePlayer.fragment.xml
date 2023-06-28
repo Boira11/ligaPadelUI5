@@ -1,0 +1,208 @@
+
+<!-- ##### ELS FRAGMENTS ENS SERVEIX EN AQUEST EXEMPLE PER CREAR COM COMPONENTS, EN AQUEST CAS JUGADORS#### -->
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    
+    
+    <Dialog id="_IDGenDialog1"
+        draggable="true"
+        stretch="{device/system/phone}"
+        showHeader="true"
+        title="{i18n>dialog.title.create.player}">
+
+
+        
+        <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+        <core:ExtensionPoint name="playersList" />
+		<f:SimpleForm id="SimpleFormChange354"
+
+        
+			editable="true"
+			layout="ColumnLayout" 
+			title="Title form"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+                <core:Title id="_IDGenTitle1" text="{i18n>create.player.section1}"/>
+
+<!-- ######################### ESTRUCTURA PER LA CREACIO ######################################################### -->
+
+                <!-- ID JUGADOR -->
+				<Label id="_IDGenLabel2" text="{i18n>create.jugador.id}" />
+				<Input id="idJugadorCreate" type="Number" enabled="false" >
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnElementData1" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+
+                </Input>
+                
+                <!-- NOM JUGADOR -->
+                <Label id="_IDGenLabel2.1" text="{i18n>create.jugador.name}" />
+				<Input id="idNameCreate" type="Text" required="true" >
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnElementData2.1" cellsSmall="2" cellsLarge="2"/>
+                    </layoutData>
+                </Input>
+
+                <!-- EDAT JUGADOR -->
+                <Label id="idLabelCrearEdat" text="{i18n>create.jugador.age}" />
+				<Input id="idInputCrearEdat" type="Number" required="true" >
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnCrearEdat" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input>
+            
+
+                <!-- POBLACIO JUGADOR -->
+                <Label id="idLabelCrearCity" text="{i18n>create.jugador.city}" />
+                <Input id="idInputCrearCity" type="Text" required="true"  >
+                     <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnCrearPob" cellsSmall="2" cellsLarge="2"/>
+                    </layoutData>
+                </Input>
+
+                 <!-- Nivell JUGADOR -->
+                <Label id="idLabelCrearLevel" text="{i18n>create.jugador.level}" />
+				<Input id="idInputCrearLevel" type="Number" required="true" >
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnCrearLevel" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input>
+               
+                 <!-- Genero JUGADOR -->
+                <Label id="idLabelCrearGenre" text="{i18n>create.jugador.genre}" />
+                <Select id="idCreateGenre">
+                    <items>
+                        <core:Item id="_IDGenre" text="" key=""/>
+                        <core:Item id="_IDGenreM" text="{i18n>genre.Male}" key=""/>
+                        <core:Item id="_IDGenreF" text="{i18n>genre.Female}" key=""/>
+                    </items>
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnElementData2" cellsSmall="2" cellsLarge="2"/>
+                    </layoutData>
+                </Select>
+
+                <!-- Mano JUGADOR -->
+                <Label id="idLabelCrearHand" text="{i18n>create.jugador.hand}" />
+                <Select id="idCreateHand">
+                    <items>
+                        <core:Item id="_IDHand" text="" key=""/>
+                        <core:Item id="_IDhandR" text="{i18n>hand.Right}" key=""/>
+                        <core:Item id="_IDhandL" text="{i18n>hand.Left}" key=""/>
+                    </items>
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnElementData2.2" cellsSmall="2" cellsLarge="2"/>
+                    </layoutData>
+                </Select>
+
+                <!-- Descripcion JUGADOR -->
+                <Label id="idLabelCrearDescription" text="{i18n>create.jugador.description}" />
+				<Input id="idInputCrearDescription" type="Text">
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnCrearDescription" cellsSmall="2" cellsLarge="4"/>
+                    </layoutData>
+                </Input>
+                
+                <!-- Altura JUGADOR -->
+                <Label id="idLabelCrearHeight" text="{i18n>create.jugador.height}" />
+				<Input id="idInputCrearHeight" type="Number">
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnCrearHeight" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input>
+
+                <!-- Peso JUGADOR -->
+                <Label id="idLabelCrearWeight" text="{i18n>create.jugador.Weight}" />
+				<Input id="idInputCrearWeight" type="Number">
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnCrearWeight" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input>
+
+                <!-- Tipo RAQUETA -->
+                <Label id="idLabelTypeRacket" text="{i18n>create.jugador.typeRacket}" />
+                <Select id="idTypeRacket">
+                    <items>
+                        <core:Item id="_IDType" text="" key=""/>
+                        <core:Item id="_IDPotencia" text="{i18n>type.Racket.Potency}" key=""/>
+                        <core:Item id="_IDControl" text="{i18n>type.Racket.Control}" key=""/>
+                        <core:Item id="_IDPolivalencia" text="{i18n>type.Racket.Polyvalence}" key=""/>
+                    </items>
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnTypeRacket" cellsSmall="2" cellsLarge="2"/>
+                    </layoutData>
+                </Select>
+
+                <!-- Tipo GRIP -->
+                <Label id="idLabelTypeGrip" text="{i18n>create.jugador.typeGrip}" />
+                <Select id="idTypeGrip">
+                    <items>
+                        <core:Item id="_IDTypeGrip" text="" key=""/>
+                        <core:Item id="_IDOverGrip" text="{i18n>type.Grip.OverGrip}" key=""/>
+                        <core:Item id="_IDfoamGrip" text="{i18n>type.Grip.foamGrip}" key=""/>
+                        <core:Item id="_IDleatherGrip" text="{i18n>type.Grip.leatherGrip}" key=""/>
+                        <core:Item id="_IDHybrid" text="{i18n>type.Grip.hybrid}" key=""/>
+                    </items>
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnTypeGrip" cellsSmall="2" cellsLarge="2"/>
+                    </layoutData>
+                </Select>
+
+                <!-- Posicion JUGADOR -->
+                <Label id="idLabelPosition" text="{i18n>create.jugador.position}" />
+                <Select id="idPosition">
+                    <items>
+                        <core:Item id="_IDPosition" text="" key=""/>
+                        <core:Item id="_IDPositionR" text="{i18n>position.left}" key=""/>
+                        <core:Item id="_IDPositionL" text="{i18n>position.right}" key=""/>
+                    </items>
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnPosition" cellsSmall="2" cellsLarge="2"/>
+                    </layoutData>
+                </Select>
+            
+            <core:Title id="_IDGenSection2" text="{i18n>create.player.section2}"/>
+
+                <!-- Partidos JUGADOR -->
+                <Label id="idLabelGamesPlayed" text="{i18n>create.jugador.gamesPlayed}" />
+				<Input id="idInputGamesPlayed" type="Number">
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnGamesPlayed" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input>
+
+                <!-- Partidos Ganados JUGADOR -->
+                <Label id="idLabelGamesWon" text="{i18n>create.jugador.gamesWon}" />
+				<Input id="idInputGamesWon" type="Number">
+                    <layoutData>
+                        <f:ColumnElementData id="_IDGenColumnGamesWon" cellsSmall="1" cellsLarge="1"/>
+                    </layoutData>
+                </Input>                    
+			</f:content>
+		</f:SimpleForm>
+        
+	</VBox>
+        
+<buttons>
+  <!-- Botones del diálogo  -->
+   <Button id="_IDGenButton1" text="{i18n>btn.create.player}" press="onCreatePlayer"/>
+   <Button id="_IDGenButton2" text="{i18n>btn.close.dialog}" press="onCloseDialogCreatePlayer"/>
+</buttons>
+        
+</Dialog>
+    
+</core:FragmentDefinition>

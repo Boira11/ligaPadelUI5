@@ -1,0 +1,12 @@
+{
+    "historialLesiones":[{
+     "idJugador":0,
+     "idLesion":1,
+     "Fecha":null,
+     "Tipo":"Esguince",
+     "RecuperacionDias":32 
+    }]
+
+    
+
+}

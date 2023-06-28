@@ -1,0 +1,153 @@
+<mvc:View
+  controllerName="padelmasterdetail.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+		xmlns:core="sap.ui.core"
+		xmlns="sap.m"
+		xmlns:f="sap.f"
+		xmlns:fb="sap.ui.comp.filterbar"
+		xmlns:svm="sap.ui.comp.smartvariants"
+	displayBlock="true"
+  height="100%">
+
+  <f:DynamicPage id="_IDGenDynamicPage1" headerExpanded="{/headerExpanded}">
+  <f:title>
+				<f:DynamicPageTitle id="_IDGenDynamicPageTitle1">
+					<f:heading>
+						<svm:SmartVariantManagement id="svm" showExecuteOnSelection="true" />
+					</f:heading>
+					<f:expandedContent>
+						<Label id="expandedLabel" text="{i18n>title}" />
+					</f:expandedContent>
+					<f:snappedContent>
+						<Label id="snappedLabel" text="{i18n>title}" />
+					</f:snappedContent>
+				</f:DynamicPageTitle>
+			</f:title>
+
+      <f:header>
+				<f:DynamicPageHeader id="_IDGenDynamicPageHeader1">
+					<f:content>
+					
+						
+						<fb:FilterBar id="filterbar" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad" >
+						
+							<fb:filterItems>
+								<fb:FilterItem 
+								id="_IDGenFilterItem1" 
+								name="poblacion" 
+								label="Ciudades">
+									<fb:control>
+										<MultiComboBox id="_IDGenMultiComboBox1"
+											name="Ciudad"
+											selectionChange=".onSelectionChange"
+											items="{
+												path:'model>/cities',
+												templateShareable: true
+											}"
+										>
+											<core:Item id="_IDGenItem3" key="{model>key}" text="{model>city}"/>
+										</MultiComboBox>
+									</fb:control>
+								</fb:FilterItem>
+
+								<fb:FilterItem 
+								id="filterRaqueta" 
+								name="tipo_raqueta" 
+								label="Raqueta">
+									<fb:control>
+										<MultiComboBox id="idComboRaqueta"
+											name="raqueta"
+											selectionChange=".onSelectionChange"
+											items="{
+												path:'model>/raqueta',
+												templateShareable: true
+											}"
+										>
+											<core:Item id="idRaqueta" key="{model>key}" text="{model>raqueta}"/>
+										</MultiComboBox>
+										
+									</fb:control>
+									
+								</fb:FilterItem>
+								<!-- FILTRO RANGO EDADES -->
+
+								<fb:FilterItem 
+								id="filterAge" 
+								name="edad" 
+								label="Edad">
+									<fb:control>
+										<MultiComboBox 
+										id="idAgeRangeComboBox"
+										selectionChange=".onAgeRangeChange"
+										enabled = "false">
+											<core:Item id="coreAge1" key="10-15" text="10-15" />
+											<core:Item id="coreAge2" key="16-24" text="16-24" />
+											<core:Item id="coreAge3" key="25-39" text="25-39" />
+											<core:Item id="coreAge4" key="40-49" text="40-49" />
+											<core:Item id="coreAge5" key="50-59" text="50-59" />
+											<core:Item id="coreAge6" key="60+" text="60+" />
+										</MultiComboBox>
+										
+									</fb:control>
+									
+								</fb:FilterItem>
+								
+							</fb:filterItems>			
+						</fb:FilterBar>
+						<HBox id="_IDGenHBox1" justifyContent="End">
+							<Button id="idButtonClean" text="Clean" press=".onCleanPress" />
+							<Button id="idButtonTeams" text="Ver equipos" press=".onPressOpenTeams"/>
+						</HBox>
+			
+					</f:content>
+				</f:DynamicPageHeader>
+			</f:header>
+		<f:content>
+        <VBox id="_IDGenVBox1453">
+        <OverflowToolbar id="_IDGenToolbar1.1" class="AdminToolbar">
+                <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+                <!-- ##### BUTTONS ##### -->
+
+                <Button id="idCreatePlayer" icon="sap-icon://add" text="{i18n>table.btn.create}"  type="Emphasized" press=".onPressOpenCreatePlayer"/>
+                
+                <OverflowToolbarButton id="_IDGenOverflowToolbarButton2" icon="sap-icon://sort" text="Sort" type="Transparent" press=".onSort"/>   
+
+                <OverflowToolbarButton id="_IDGenOverflowToolbarButton3" icon="sap-icon://undo" text="Sort" type="Transparent" press=".onOrderId"/>       
+				
+				<Button id="idCreateTeam" class="sapUiSmallMargin"
+				text="Create Team"
+				press="handleOpenDialog" />  
+				 
+        </OverflowToolbar>
+<Table id="table" mode="SingleSelectMaster"  growing="true" growingThreshold="20" growingScrollToLoad="true"  items="{path:'jugadoresPadel>/jugadores'}" selectionChange="onPlayerSelected">
+
+    <!-- NOMBRE DE LAS COLUMNAS-->
+    <columns>
+      <Column id ="col-4-id" ><Text id ="_IDGenText0" text="{i18n>table.column.id}" /></Column>
+      <Column id ="col-1-nom"><Text id ="_IDGenText1" text="{i18n>table.column.nom}" /></Column>
+      <Column id ="col-4-edad"><Text id ="_IDGenText4" text="{i18n>table.column.edad}" /></Column>
+      <Column id ="col-3-niv"><Text id ="_IDGenText3" text="{i18n>table.column.niv}" /></Column> 
+	  <Column id ="col-4-ciudad"><Text id ="_IDGenText1.1" text="{i18n>table.column.city}" /></Column> 
+	  <Column id ="col-4-raqueta"><Text id ="_IDGenText1.raqueta" text="{i18n>table.column.racket}" /></Column>     
+    </columns>	
+
+    <items>
+      <ColumnListItem id = "_IDGenColumnListItem1">
+          <cells>
+            <Text id = "_IDGenText5" text = "{jugadoresPadel>id}" />
+            <Text id = "_IDGenText6" text = "{jugadoresPadel>nombre}" />
+            <Text id = "_IDGenText7" text = "{jugadoresPadel>edad}" />
+            <Text id = "_IDGenText8" text = "{jugadoresPadel>nivel}" />        
+			<Text id = "_IDGenText9" text = "{jugadoresPadel>poblacion}" /> 
+			<Text id = "_IDGenText10" text = "{jugadoresPadel>tipo_raqueta}" />       
+          </cells>
+        </ColumnListItem>
+    </items>
+            </Table>
+	
+		  </VBox>
+    </f:content>
+
+    </f:DynamicPage>
+
+</mvc:View>
